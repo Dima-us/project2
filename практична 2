@@ -1,0 +1,16 @@
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+list2 = [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5]
+
+comb_list = list1 + list2
+
+types_list = [type(a).__name__ for a in comb_list]
+
+from collections import Counter
+type_counter = Counter(types_list)
+
+most_common_type = type_counter.most_common(1)[0]
+
+print("Список значень:", comb_list)
+print("Список типів:", types_list)
+print("Найпоширеніший тип даних:", most_common_type[0])
+
